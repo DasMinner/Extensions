@@ -1,5 +1,3 @@
-package de.philgamer.adminfeatures.extensions
-
 import net.axay.kspigot.extensions.geometry.LocationArea
 import org.bukkit.Location
 import org.bukkit.Material
