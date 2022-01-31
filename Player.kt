@@ -1,3 +1,5 @@
+package de.philgamer.adminfeatures.extensions
+
 import net.axay.kspigot.extensions.geometry.LocationArea
 import org.bukkit.Location
 import org.bukkit.Material
@@ -14,3 +16,10 @@ fun Player.getUnderBlock(): Block {
 
 fun Player.isInArea(location: Location, location2: Location): Boolean =
     LocationArea(location, location2).isInArea(this.location, false, 0)
+
+fun Player.getUpperMaterial(): Material {
+    return player!!.location.add(0.0, 1.0, 0.0).block.type
+}
+fun Player.getUpperBlock(): Block {
+    return player!!.location.add(0.0, 1.0, 0.0).block
+}
