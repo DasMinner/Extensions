@@ -28,3 +28,9 @@ fun location(world: World, x: Int, y: Int, z: Int): Location {
     val loc = Location(world, x.toDouble(), y.toDouble(), z.toDouble())
     return loc
 }
+//thanks to shortexception
+fun locationAsString(world: String, x: Int, y: Int, z: Int): Location {
+    if (!Bukkit.getWorlds().contains(Bukkit.getWorld(world))) throw NullPointerException("World ${world} is null!")
+    return Location(Bukkit.getWorld(world), x.toDouble(), y.toDouble(), z.toDouble())
+}
+
