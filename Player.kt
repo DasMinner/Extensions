@@ -23,3 +23,7 @@ fun Player.getUpperMaterial(): Material {
 fun Player.getUpperBlock(): Block {
     return player!!.location.add(0.0, 1.0, 0.0).block
 }
+fun location(world: World, x: Int, y: Int, z: Int): Location {
+    val loc = Location(world, x.toDouble(), y.toDouble(), z.toDouble())
+    return loc
+}
