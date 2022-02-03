@@ -1,10 +1,12 @@
-package de.philgamer.adminfeatures.extensions
+package de.philgamer.uhc.extensions
 
 import net.axay.kspigot.extensions.geometry.LocationArea
+import org.bukkit.Bukkit
 import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.block.Block
 import org.bukkit.entity.Player
+import org.bukkit.util.Vector
 
 fun Player.getUnderMaterial(): Material {
     return player!!.location.subtract(0.0, 1.0, 0.0).block.type
@@ -17,19 +19,14 @@ fun Player.getUnderBlock(): Block {
 fun Player.isInArea(location: Location, location2: Location): Boolean =
     LocationArea(location, location2).isInArea(this.location, false, 0)
 
-fun Player.getUpperMaterial(): Material {
-    return player!!.location.add(0.0, 1.0, 0.0).block.type
+fun Player.killPlayer() {
+    player!!.health = 0.0
 }
-fun Player.getUpperBlock(): Block {
-    return player!!.location.add(0.0, 1.0, 0.0).block
-}
-//thanks to shortexception
-fun location(world: String, x: Int, y: Int, z: Int): Location {
-    if (!Bukkit.getWorlds().contains(Bukkit.getWorld(world))) throw NullPointerException("World ${world} is null!")
-    return Location(Bukkit.getWorld(world), x.toDouble(), y.toDouble(), z.toDouble())
+
+fun Player.boost(boost: Vector) {
+    player!!.velocity.add(boost)
 }
 fun Player.clearInventory() {
     player!!.inventory.clear()
 }
-
 
