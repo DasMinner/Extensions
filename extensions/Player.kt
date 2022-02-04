@@ -15,7 +15,10 @@ fun Player.getUnderMaterial(): Material? {
     return player!!.location.subtract(0.0, 1.0, 0.0).block.type
 }
 
-fun Player.getUnderBlock(): Block {
+fun Player.getUnderBlock(): Block? {
+    if (player!!.location.subtract(0.0, 1.0, 0.0).block.type != Material.AIR) {
+        return null
+    }
     return player!!.location.subtract(0.0, 1.0, 0.0).block
 }
 fun Player.isInArea(location: Location, location2: Location): Boolean =
