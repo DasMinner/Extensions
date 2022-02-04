@@ -8,7 +8,10 @@ import org.bukkit.block.Block
 import org.bukkit.entity.Player
 import org.bukkit.util.Vector
 
-fun Player.getUnderMaterial(): Material {
+fun Player.getUnderMaterial(): Material? {
+    if (player!!.location.subtract(0.0, 1.0, 0.0).block.type != Material.AIR) {
+        return null
+    } 
     return player!!.location.subtract(0.0, 1.0, 0.0).block.type
 }
 
