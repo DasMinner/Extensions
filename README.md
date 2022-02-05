@@ -7,6 +7,8 @@ If you want to drop an item you have to write:
 `
 dropItem(location, ItemStack(Material))
 `
+
+
 Create a location:
 `
 val locationanme = location("worldname", x, y, z)
