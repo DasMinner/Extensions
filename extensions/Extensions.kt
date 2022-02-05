@@ -1,5 +1,3 @@
-package de.philgamer.uhc.extensions
-
 import org.bukkit.Bukkit
 import org.bukkit.Location
 
