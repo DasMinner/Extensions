@@ -30,4 +30,9 @@ fun Player.killPlayer() {
 fun Player.clearInventory() {
     player!!.inventory.clear()
 }
+fun Player.clearItem(item: ItemStack) {
+    if (!player!!.inventory.contains(item)) throw NullPointerException("$item is not in the Inventory from $player")
+    player!!.inventory.removeItem(item)
+}
+
 
