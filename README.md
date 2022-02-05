@@ -4,6 +4,7 @@ The extensions are made for kotlin (kspigot)
 
 # Examples:
 If you want to drop an item you have to write:
+
 `
 dropItem(location, ItemStack(Material))
 `
