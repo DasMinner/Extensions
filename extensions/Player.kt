@@ -1,5 +1,3 @@
-package de.philgamer.uhc.extensions
-
 import net.axay.kspigot.extensions.geometry.LocationArea
 import org.bukkit.Bukkit
 import org.bukkit.Location
