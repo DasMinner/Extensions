@@ -1,5 +1,9 @@
+import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.Bukkit
 import org.bukkit.Location
+import org.bukkit.inventory.ItemStack
+import java.nio.file.Files
+import kotlin.io.path.div
 
 fun location(world: String, x: Int, y: Int, z: Int): Location {
     if (!Bukkit.getWorlds().contains(Bukkit.getWorld(world))) throw NullPointerException("World $world is null!")
