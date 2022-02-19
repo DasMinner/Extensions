@@ -9,8 +9,9 @@ fun location(world: String, x: Int, y: Int, z: Int): Location {
     if (!Bukkit.getWorlds().contains(Bukkit.getWorld(world))) throw NullPointerException("World $world is null!")
     return Location(Bukkit.getWorld(world), x.toDouble(), y.toDouble(), z.toDouble())
 }
-fun dropItem(location: Location, item: ItemStack) {
-    location.block.world.dropItem(location, item)
+fun dropItem(location: Location, item: Material) {
+    if (item == AIR) throw NullPointerException("Air can't drop")
+    location.block.world.dropItem(location, ItemStack(item))
 }
 
 fun deleteWorld(world: String) {
