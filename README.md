@@ -6,7 +6,7 @@ The extensions are made for kotlin (kspigot)
 If you want to drop an item you have to write:
 
 `
-dropItem(location, Material.MATERIAL)
+dropItem(location, Material)
 `
 
 
