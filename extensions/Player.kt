@@ -31,4 +31,6 @@ fun Player.clearInventory() {
 fun Player.boost(x: Int, y: Int, z: Int) {
     player!!.velocity = Vector(x.toDouble(), y.toDouble(), z.toDouble())
 }
-
+fun Player.potionEffect(effect: PotionEffectType, duration: Int, amplifier: Int, ambient: Boolean, particles: Boolean, icon: Boolean) {
+    player!!.addPotionEffect(PotionEffect(effect, duration, amplifier, true, true, true))
+}
