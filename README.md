@@ -1,8 +1,8 @@
-### Extensions
+# Extensions
 You can find some extensions for Players, Entitys and some other stuff.
 The extensions are made for kotlin (kspigot)
 
-# Examples:
+## Examples:
 If you want to drop an item you have to write:
 
 `
