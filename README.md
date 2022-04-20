@@ -1,6 +1,6 @@
 # Extensions
 You can find some extensions for Players, Entitys and some other stuff.
-The extensions are made for kotlin (kspigot)
+The extensions are made in/for kotlin (kspigot)
 
 ## Examples:
 If you want to drop an item you have to write:
