@@ -6,6 +6,7 @@ import java.nio.file.Files
 import kotlin.io.path.div
 import org.bukkit.Material
 import org.bukkit.Material.AIR
+import org.bukkit.entity.EntityType
 
 fun location(world: String, x: Int, y: Int, z: Int): Location {
     if (!Bukkit.getWorlds().contains(Bukkit.getWorld(world))) throw NullPointerException("World $world is null!")
@@ -32,4 +33,8 @@ fun deleteWorld(world: String) {
     Files.createDirectories(worldPath / "playerdata")
     Files.createDirectories(worldPath / "poi")
     Files.createDirectories(worldPath / "region")
+}
+
+fun spawnEntity(location: Location, entity: EntityType) {
+    location.world.spawnEntity(location, entity)
 }
